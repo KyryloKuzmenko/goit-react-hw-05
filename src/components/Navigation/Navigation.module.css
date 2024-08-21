@@ -1,0 +1,25 @@
+.header {
+    background-color: #05057a;
+    height: 10vh;
+}
+
+.linksWrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.link {
+  padding: 4px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  margin-right: 30px;
+}
+
+.link:hover {
+  color: #27ffb7;
+}
+
+
+

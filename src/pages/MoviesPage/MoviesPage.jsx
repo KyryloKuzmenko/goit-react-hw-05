@@ -1,0 +1,8 @@
+
+
+const MoviePage = () => {
+
+    return (
+        
+    )
+}
