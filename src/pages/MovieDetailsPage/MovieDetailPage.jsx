@@ -25,26 +25,44 @@ const MovieDetailPage = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(detailMovie)
 
   return (
     <div className={style.backGround}>
       <div className={`container ${style.wrap}`}>
         <img
           className={`${style.img}`}
-          src={"https://image.tmdb.org/t/p/w500/" + detailMovie.poster_path}
+          src={'https://image.tmdb.org/t/p/w500/' + detailMovie.poster_path}
           alt=""
         />
         <div className={style.text}>
-          <h3 className={`${style.title}`}>{detailMovie.title}</h3>
-          <p>{detailMovie.release_date}</p>
+          <h3 className={`${style.title}`}>{`${
+            detailMovie.title
+          } (${detailMovie.release_date.slice(0, 4)})`}</h3>
+          <p className={style.p}>
+            User score:{' '}
+            {detailMovie.vote_average.toString().replace('.', '').slice(0, 2)}%
+          </p>
+          <h4 className={style.overview}>Overview</h4>
+          <p>{detailMovie.overview}</p>
+          <h4 className={style.genres}>Genres</h4>
+          <ul>
+            {detailMovie.genres.map(({ id, name }) => (
+              <li key={id}>
+                <p>{name}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
+      <div className={style.line}></div>
+      <p className={`container`}>Addition information</p>
       <div className={`container ${style.wrap}`}>
-        <Link to="cast">
+        <Link className={style.cast} to="cast">
           Cast
         </Link>
-        <Link to="reviews">
+        <Link className={style.reviews} to="reviews">
           Reviews
         </Link>
       </div>
