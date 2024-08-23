@@ -25,7 +25,6 @@ const MovieDetailPage = () => {
     return <div>Loading...</div>;
   }
 
-  console.log(detailMovie)
 
   return (
     <div className={style.backGround}>

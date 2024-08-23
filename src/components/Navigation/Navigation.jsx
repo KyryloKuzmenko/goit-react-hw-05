@@ -15,6 +15,7 @@ const Navigation = () => {
           Home
         </NavLink>
         <NavLink
+          to="/movies"
           className={({ isActive }) =>
             clsx(style.link, isActive && style.active)
           }
