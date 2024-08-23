@@ -7,6 +7,7 @@ const Navigation = () => {
     <header className={style.header}>
       <div className={`container ${style.linksWrap}`}>
         <NavLink
+          to="/"
           className={({ isActive }) =>
             clsx(style.link, isActive && style.active)
           }

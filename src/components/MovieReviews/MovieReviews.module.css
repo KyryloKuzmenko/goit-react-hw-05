@@ -1,0 +1,29 @@
+.reviews {
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.p {
+    margin-top: 20px;
+    color: rgb(49, 49, 49);
+}
+
+.li {
+    padding: 30px;
+    border: solid 1px black;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+
+
+.img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.h4 {
+    margin-top: 10px;
+}

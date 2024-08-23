@@ -1,0 +1,24 @@
+.img {
+    width: 220px;
+    height: 330px;
+    border-radius: 10px;
+}
+
+.wrap {
+    margin-top: 30px;
+    display: flex;
+}
+
+.text {
+    margin-left: 40px;
+}
+
+
+.backGround {
+  background-size: cover; /* Чтобы изображение покрывало весь блок */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Не повторяем изображение */
+  width: 100%; /* Или другое значение в зависимости от нужного размера */
+  height: 100vh; /* Или другое значение в зависимости от нужного размера */
+  position: relative; /* Чтобы внутренние элементы можно было позиционировать относительно этого блока */
+}

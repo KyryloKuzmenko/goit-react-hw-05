@@ -1,0 +1,66 @@
+.wrap {
+  overflow: hidden; 
+  display: flex; 
+  align-items: center;
+  width: 100%;
+}
+
+.list {
+  display: inline-flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth; 
+  white-space: nowrap; 
+  margin: 0 10px; 
+  flex: 1;
+}
+
+.li img {
+  width: 100%; 
+  display: block; 
+  border-radius: 10px;
+}
+
+.li {
+  width: 100px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.scrollButton {
+  background-color: #1c1d20;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scrollButton:hover {
+  background-color: #333;
+}
+
+.cast {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.li p {
+  margin: 5px 0 0; 
+  font-size: 14px; 
+  white-space: normal; 
+  word-break: break-word; 
+  max-width: 100%; 
+}
+
+
+.noImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    text-align: center;
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+}
+
