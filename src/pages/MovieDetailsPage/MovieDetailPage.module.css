@@ -1,32 +1,67 @@
 .img {
-  width: 220px;
-  height: 330px;
+  width: 300px;
+  height: 450px;
   border-radius: 10px;
 }
 
 .wrap {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   display: flex;
   margin-bottom: 30px;
 }
 
+.contentWrap {
+  display: flex;
+  align-items: center;
+}
+
 .text {
   margin-left: 40px;
+  color: rgb(222, 222, 222);
+
 }
 
 .p {
   margin-top: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .overview {
   margin-top: 20px;
   margin-bottom: 10px;
+  color: rgb(255, 255, 255);
 }
 
 .genres {
   margin-top: 60px;
   margin-bottom: 10px;
+  color: rgb(255, 255, 255);
 }
+.goBackWrap {
+  position: absolute;
+}
+
+
+.backdrop {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  z-index: 1;
+}
+
+.backdrop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Пример затемнения на 50% */
+  z-index: -1;
+}
+
 
 .cast {
   margin-right: 30px;
@@ -58,11 +93,17 @@
   margin-bottom: 16px; /* Отступ между полоской и следующим элементом */
 }
 
-.backGround {
-  background-size: cover; /* Чтобы изображение покрывало весь блок */
-  background-position: center; /* Центрируем изображение */
-  background-repeat: no-repeat; /* Не повторяем изображение */
-  width: 100%; /* Или другое значение в зависимости от нужного размера */
-  height: 100vh; /* Или другое значение в зависимости от нужного размера */
-  position: relative; /* Чтобы внутренние элементы можно было позиционировать относительно этого блока */
+
+
+.goBack {
+  background-color: rgb(0, 153, 255);
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: aliceblue;
 }
+
+.goBack:hover {
+  background-color: rgb(14, 100, 157);
+}
+
+

@@ -5,6 +5,8 @@ import { requestQueryMovie } from '../../services/api';
 import style from "./MoviesPage.module.css"
 
 const MoviePage = () => {
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query') || '';
@@ -37,22 +39,25 @@ const MoviePage = () => {
     console.log(movies)
   return (
     <div className={`container ${style.wrap}`}>
-      <form onSubmit={handleSearch}>
-        <input type="text" name="query" defaultValue={query} />
-        <button type="submit">Search</button>
+      <form className={style.form} onSubmit={handleSearch}>
+        <input className={style.input} type="text" name="query" defaultValue={query} />
+        <button className={style.submit} type="submit">Search</button>
       </form>
 
       <ul className={`${style.list}`}>
         {movies.map(movie => (
-          <li key={movie.id}>
+          <li className={style.li} key={movie.id}>
             <Link to={`${movie.id}`} state={{ from: location }}>
-                    <img
-                        className={style.img}
-                src={`https://image.tmdb.org/t/p/w500/` + movie.backdrop_path}
+              <img
+                className={style.img}
+                src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path}
                 alt=""
               />
               <h3>{movie.title}</h3>
             </Link>
+            <p>
+              {new Date(movie.release_date).toLocaleDateString('en-US', options)}
+            </p>
           </li>
         ))}
       </ul>

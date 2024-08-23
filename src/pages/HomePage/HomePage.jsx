@@ -26,7 +26,7 @@ const HomePage = () => {
 
     return (
         <div className={`${style.container}`}>
-            <h1>Trending today</h1>
+            <h1 className={style.titleTrend}>Trending today</h1>
             <MovieList trendMovies={trendMovie} />
         </div>
     )

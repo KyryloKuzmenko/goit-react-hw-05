@@ -1,4 +1,20 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto/Roboto-Regular.ttf') format('woff2'),
+    url('/fonts/roboto/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -26,11 +42,10 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
-
-
 
 img {
   display: block;
@@ -40,7 +55,6 @@ img {
   max-width: 1158px;
   /* margin: 0 auto; */
   padding-left: 150px;
-
 }
 
 button {
@@ -64,7 +78,6 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-
     background-color: #ffffff;
   }
 

@@ -5,8 +5,6 @@ const MovieList = ({ trendMovies }) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   const location = useLocation();
 
-
-
     return (
       <ul className={`container ${style.movieList}`}>
         {trendMovies.map(({ id, title, poster_path, release_date }) => (

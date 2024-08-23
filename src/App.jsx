@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation'
 import { Routes, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import MoviePage from './pages/MoviesPage/MoviesPage.jsx';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 
 const MovieDetailPage = lazy(() => import("./pages/MovieDetailsPage/MovieDetailPage.jsx"));
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"))
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='movies' element={<MoviePage />} />
           <Route path="movies/:movieId/*" element={<MovieDetailPage />} />
+          <Route path='*' element={<NotFoundPage/>} />
         </Routes>
       </Suspense>
     </>

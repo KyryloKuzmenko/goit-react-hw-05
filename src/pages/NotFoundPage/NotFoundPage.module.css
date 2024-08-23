@@ -1,0 +1,25 @@
+.homeLink {
+    margin-top: 10px;
+    background-color: rgb(30, 30, 255);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.centered {
+  display: flex;
+  justify-content: center; /* Центровка по горизонтали */
+  align-items: center; /* Центровка по вертикали */
+  height: 80vh; /* Высота контейнера равна высоте экрана */
+}
+
+.title {
+  text-align: center;
+}
+
+
+.homeLink:hover {
+    background-color: #05057a;
+}
+
