@@ -35,13 +35,23 @@ const MoviePage = () => {
 
     fetchMovies();
   }, [query]);
+
+
     
     console.log(movies)
   return (
     <div className={`container ${style.wrap}`}>
       <form className={style.form} onSubmit={handleSearch}>
-        <input className={style.input} type="text" name="query" defaultValue={query} />
-        <button className={style.submit} type="submit">Search</button>
+        <input
+          className={style.input}
+          type="text"
+          name="query"
+          defaultValue={query}
+          placeholder="Search for a movie"
+        />
+        <button className={style.submit} type="submit">
+          Search
+        </button>
       </form>
 
       <ul className={`${style.list}`}>
@@ -51,12 +61,15 @@ const MoviePage = () => {
               <img
                 className={style.img}
                 src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path}
-                alt=""
+                alt={movie.original_title}
               />
-              <h3>{movie.title}</h3>
+              <h3 className={style.title}>{movie.title}</h3>
             </Link>
-            <p>
-              {new Date(movie.release_date).toLocaleDateString('en-US', options)}
+            <p className={style.release}>
+              {new Date(movie.release_date).toLocaleDateString(
+                'en-US',
+                options
+              )}
             </p>
           </li>
         ))}

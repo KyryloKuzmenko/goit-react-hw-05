@@ -53,7 +53,7 @@ const MovieDetailPage = () => {
           <img
             className={`container ${style.img}`}
             src={'https://image.tmdb.org/t/p/w500/' + detailMovie.poster_path}
-            alt=""
+            alt={detailMovie.original_title}
           />
           <div className={`${style.text}`}>
             <h3 className={`${style.title}`}>{`${
@@ -79,7 +79,7 @@ const MovieDetailPage = () => {
       </div>
 
       <div className={style.line}></div>
-      <p className={`container`}>Addition information</p>
+      <p className={`container ${style.info}`}>Addition information</p>
       <div className={`container ${style.wrap}`}>
         <Link className={style.cast} to="cast">
           Cast

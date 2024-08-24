@@ -19,26 +19,55 @@
 }
 
 .input {
-    height: 20px;
-    padding-left: 10px;
-    border-radius: 3px;
+    width: 97%;
+    height: 46px;
+    padding-left: 20px;
+    line-height: 46px;
+    border-radius: 30px;
     border: solid 1px black;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, .5);
 }
 
 .input:active {
     border: solid 2px black;
 }
 
+:root {
+    --tmdbLightGreen: 34, 193, 195; /* Пример значения */
+    --tmdbLightBlue: 253, 187, 45; /* Пример значения */
+}
+
 .submit {
-    margin-left: 20px;
-    background-color: rgb(0, 153, 255);
+    background: linear-gradient(to right, rgba(var(--tmdbLightGreen), 1) 0%, rgba(var(--tmdbLightBlue), 1) 100%);
     color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    padding: 10px 20px;
+    height: 100%;
+    width: 150px;
+    
+    
 }
 
 .form {
     margin-top: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
 }
 
-.submit:hover {
-    background-color: rgb(14, 100, 157);
+.title {
+    color: black;
 }
+
+.release {
+    color: rgb(76, 76, 76);
+}
+
+
+
+

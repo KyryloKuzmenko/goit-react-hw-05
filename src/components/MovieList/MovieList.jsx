@@ -7,19 +7,23 @@ const MovieList = ({ trendMovies }) => {
 
     return (
       <ul className={`container ${style.movieList}`}>
-        {trendMovies.map(({ id, title, poster_path, release_date }) => (
-          <li key={id} className={style.li}>
-            <Link to={`movies/${id}`} state={{from: location}}>
-            <img
-              className={style.img}
-              src={"https://image.tmdb.org/t/p/w500/" + poster_path}
-              alt=""
-            />
-            <h3>{title}</h3>
-            </Link>
-            <p>{new Date(release_date).toLocaleDateString("en-US", options)}</p>
-          </li>
-        ))}
+        {trendMovies.map(
+          ({ id, title, poster_path, release_date, original_title }) => (
+            <li key={id} className={style.li}>
+              <Link to={`movies/${id}`} state={{ from: location }}>
+                <img
+                  className={style.img}
+                  src={'https://image.tmdb.org/t/p/w500/' + poster_path}
+                  alt={original_title}
+                />
+                <h3 className={style.title}>{title}</h3>
+              </Link>
+              <p className={style.release}>
+                {new Date(release_date).toLocaleDateString('en-US', options)}
+              </p>
+            </li>
+          )
+        )}
       </ul>
     );
 }

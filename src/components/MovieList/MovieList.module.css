@@ -16,3 +16,11 @@
 .li {
     width: 220px;
 }
+
+.title {
+    color: black;
+}
+
+.release {
+    color: rgb(73, 73, 73);
+}
