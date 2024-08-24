@@ -25,7 +25,7 @@ const MovieReviews = () => {
     return null;
   }
 
-  console.log(movieReviews);
+
   return (
     <div className={`container ${style.reviews}`}>
       {movieReviews.length > 0 ? (

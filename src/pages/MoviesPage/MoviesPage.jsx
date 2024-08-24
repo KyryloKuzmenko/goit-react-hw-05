@@ -37,8 +37,6 @@ const MoviePage = () => {
   }, [query]);
 
 
-    
-    console.log(movies)
   return (
     <div className={`container ${style.wrap}`}>
       <form className={style.form} onSubmit={handleSearch}>

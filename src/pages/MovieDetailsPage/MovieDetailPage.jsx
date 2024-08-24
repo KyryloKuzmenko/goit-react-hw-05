@@ -27,15 +27,6 @@ const MovieDetailPage = () => {
     return <div>Loading...</div>;
   }
 
-    //  const backdropStyle = {
-    //    backgroundImage: `url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detailMovie.backdrop_path}')`,
-    //    backgroundSize: 'cover',
-    //    backgroundPosition: 'center',
-    //    backgroundRepeat: 'no-repeat',
-    //    minHeight: '100vh',
-    //  };
-  
-  console.log(detailMovie)
 
   const backdrop = {
       backgroundImage: `url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detailMovie.backdrop_path}')`,
